@@ -15,6 +15,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         textComponent = findViewById(R.id.textComponent);
-        textComponent.setBackground(getResources().getDrawable(R.drawable.black));
+        //textComponent.setBackground(getResources().getDrawable(R.drawable.black));
+        textComponent.setBackgroundColor(getResources().getColor(R.color.black));
     }
 }

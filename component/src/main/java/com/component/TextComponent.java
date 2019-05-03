@@ -40,4 +40,11 @@ public class TextComponent extends AppCompatTextView {
         //setBackground(background);
         super.setBackground(background);
     }
+
+    @Override
+    public void setBackgroundColor(int color) {
+        super.setBackgroundColor(color);
+        setTextColor(Color.MAGENTA);
+        super.setPadding(10 , 10 , 10 , 10);
+    }
 }
