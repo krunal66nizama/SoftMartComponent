@@ -2,28 +2,23 @@ package com.component;
 
 import android.content.Context;
 import android.graphics.Color;
-import android.graphics.Rect;
 import android.graphics.drawable.Drawable;
 import android.os.Build;
 import android.support.annotation.RequiresApi;
-import android.support.v7.widget.AppCompatTextView;
+import android.support.v7.widget.AppCompatButton;
 import android.util.AttributeSet;
-import android.util.TypedValue;
 
-public class TextComponent extends AppCompatTextView {
-    public TextComponent(Context context) {
+public class ButtonComponent extends AppCompatButton {
+    public ButtonComponent(Context context) {
         super(context);
-        super.setBackground(context.getResources().getDrawable(R.drawable.focused_removed));
     }
 
-    public TextComponent(Context context, AttributeSet attrs) {
+    public ButtonComponent(Context context, AttributeSet attrs) {
         super(context, attrs);
-        super.setBackground(context.getResources().getDrawable(R.drawable.focused_removed));
     }
 
-    public TextComponent(Context context, AttributeSet attrs, int defStyleAttr) {
+    public ButtonComponent(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
-        super.setBackground(context.getResources().getDrawable(R.drawable.focused_removed));
     }
 
     @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN)
@@ -52,9 +47,4 @@ public class TextComponent extends AppCompatTextView {
         setTextColor(Color.MAGENTA);
         super.setPadding(10 , 10 , 10 , 10);
     }
-
-    /*public void setDefault() {
-        super.setPadding(20, 20, 20, 20);
-        super.setTextSize(TypedValue.COMPLEX_UNIT_DIP, 15);
-    }*/
 }

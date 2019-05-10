@@ -17,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
     Context context;
     TextView txt;
     Button btn;
-    com.component.EdittextComponent edtComponent, edtComponent1;
+    com.component.EdittextComponent edtComponent, edtComponent1 , edtComponent2,  edtComponent3, edtComponent4;
 
     @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN)
     @Override
@@ -30,20 +30,20 @@ public class MainActivity extends AppCompatActivity {
         btn = findViewById(R.id.btn);
         edtComponent = findViewById(R.id.edtComponent);
         edtComponent1 = findViewById(R.id.edtComponent1);
+        edtComponent2 = findViewById(R.id.edtComponent2);
+        edtComponent3 = findViewById(R.id.edtComponent3);
+        edtComponent4 = findViewById(R.id.edtComponent4);
 
+        edtComponent.setType("price");
+        edtComponent1.setType("phone");
+        edtComponent2.setType("ssn");
+        edtComponent3.setType("password");
+        edtComponent4.setType("datePicker");
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
                 txt.setText(edtComponent.getValue());
-                /*if (edtComponent.getText().length() > 0) {
-                    String cleanString = edtComponent.getText().toString().replaceAll("[₹$,.]", "");
-                    cleanString = cleanString.replaceAll("\\s", "");
-
-                    double parsed = Double.parseDouble(cleanString);
-                    txt.setText(String.valueOf(parsed / 100));
-                    txt.setText(edtComponent.getValue());
-                }*/
             }
         });
     }
